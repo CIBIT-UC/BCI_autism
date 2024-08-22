@@ -10,7 +10,7 @@ dir = "C:\toolbox\Code_Speller_Reverse\data\";
 time=[0 1]; % Epochs
 topo_plots_lim = [0 5.5]; %Theta: [0 5.5]; Alpha: [0 4].
 freqmin=4; %Min freq. Theta: 4 Hz; Alpha: 8 Hz
-freqmax=8; %Max freq. Theta: 8 Hz; Alpha: 13 Hz
+freqmax=8; %Max freq. Theta: 8 Hz; Alpha: 12 Hz
 
 %% 
 theta_Corr=[];
