@@ -1,4 +1,4 @@
-%% Topographic maps of power distribution - Response feedback
+%% Save epochs and generate topographic maps of power distribution - Response feedback
 
 clear all; clc; close all
 
