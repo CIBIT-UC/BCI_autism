@@ -2,7 +2,7 @@
 
 % Export file to perform a mixed-ANOVA using spss to evaluate the impact of
 % group (non-autistic and autistic), practice/learning stage (initial,
-% intermidiate 1 and 2, and final), and respective interaction on BCI error
+% intermediate 1 and 2, and final), and respective interaction on BCI error
 % rate.
 
 clear all
