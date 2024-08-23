@@ -22,11 +22,11 @@ i = 1;
 for g=1:length(group)
     for sub = [1:10]            %Subjects  
 
-        if exist(char(strcat(dir, group(g), num2str(sub), '\online_data\epochs\7_preparation.set')))
+        if exist(char(strcat(dir, group(g), num2str(sub), '\online_data\epochs\7_preResponse.set')))
 
-            preresp_5 = pop_loadset('filename', '5_preparation.set', 'filepath', ...
+            preresp_5 = pop_loadset('filename', '5_preResponse.set', 'filepath', ...
                 char(strcat(dir, group(g), num2str(sub), '\online_data\epochs\')));
-            preresp_7 = pop_loadset('filename', '7_preparation.set', 'filepath', ...
+            preresp_7 = pop_loadset('filename', '7_preResponse.set', 'filepath', ...
                 char(strcat(dir, group(g), num2str(sub), '\online_data\epochs\')));
             
             prep5 = pop_epoch(preresp_5, {'5_cue', '5_cue_err'}, prep_time);
