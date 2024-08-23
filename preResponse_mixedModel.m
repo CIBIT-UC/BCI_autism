@@ -84,33 +84,33 @@ for g=1:length(group)
                     end
 
                     if p == 1 && t<=preresp_5.trials
-                        prep = prep5;
+                        preResp = prep5;
                     elseif p == 1 && t>preresp_5.trials
-                        prep = prep7;
+                        preResp = prep7;
                     elseif p == 2 && t<=preresp_5.trials
-                        prep = inst5;
+                        preResp = inst5;
                     elseif p == 2 && t>preresp_5.trials
-                        prep = inst7;
+                        preResp = inst7;
                     elseif p == 3 && t<=preresp_5.trials
-                        prep = encod5;
+                        preResp = encod5;
                     else
-                        prep = encod7;
+                        preResp = encod7;
                     end
 
-                    if prep.event(tt).type == "5_cue" || prep.event(tt).type == "7_cue" || ...
-                            ((prep.event(1).type == "5_imag" || prep.event(1).type == "7_imag") && ...
+                    if preResp.event(tt).type == "5_cue" || preResp.event(tt).type == "7_cue" || ...
+                            ((preResp.event(1).type == "5_imag" || preResp.event(1).type == "7_imag") && ...
                             freq_power{i-1,8} == 1)
                         freq_power{i,8} = 1;        %Performance: 1 = correct; 2 = error
                     else
                         freq_power{i,8} = 2; 
                     end
                     
-                    freq_power{i,9} = p; % preparatory encoding period
+                    freq_power{i,9} = p; % pre-response period
                     
                     col=10;
                     for f=freq_min
                         for ch = channels
-                            freq_power{i,col} = freqPower(prep, f, f+4, ch, tt); %Power
+                            freq_power{i,col} = freqPower(preResp, f, f+4, ch, tt); %Power
                             col=col+1;
                         end
                     end
