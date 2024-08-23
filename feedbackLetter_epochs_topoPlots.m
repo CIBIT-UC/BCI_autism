@@ -12,9 +12,9 @@ freqmin=4; %Min freq. Theta: 4 Hz; Alpha: 8 Hz
 freqmax=8; %Max freq. Theta: 8 Hz; Alpha: 12 Hz
 
 %% 
-theta_Corr=[];
-theta_Serr=[];
-theta_Perr=[];
+power_Corr=[];
+power_Serr=[];
+power_Perr=[];
 
 trials_corr = [];
 trials_Perr = [];
@@ -91,19 +91,19 @@ for sub = [1:10]           %Subjects
     end
 
     % Power computation
-    theta_Corr_sub = freqPower(corr,freqmin,freqmax,[2:corr.nbchan],[1:corr.trials]);
-    theta_Corr = [theta_Corr, theta_Corr_sub];
+    power_Corr_sub = freqPower(corr,freqmin,freqmax,[2:corr.nbchan],[1:corr.trials]);
+    power_Corr = [power_Corr, power_Corr_sub];
     trials_corr = [trials_corr, corr.trials];
     
-    theta_Serr_sub = freqPower(Serr,freqmin,freqmax,[2:Serr.nbchan],[1:Serr.trials]);
-    theta_Serr = [theta_Serr, theta_Serr_sub];
+    power_Serr_sub = freqPower(Serr,freqmin,freqmax,[2:Serr.nbchan],[1:Serr.trials]);
+    power_Serr = [power_Serr, power_Serr_sub];
     trials_Serr = [trials_Serr, Serr.trials];
     
     if length(conditions)>2
         
         if ismember("Perr", cond_names) && ~(sub==9 && group=="P")
-            theta_Perr_sub = freqPower(Perr,freqmin,freqmax,[2:Perr.nbchan],[1:Perr.trials]);
-            theta_Perr = [theta_Perr, theta_Perr_sub];
+            power_Perr_sub = freqPower(Perr,freqmin,freqmax,[2:Perr.nbchan],[1:Perr.trials]);
+            power_Perr = [power_Perr, power_Perr_sub];
             trials_Perr = [trials_Perr, Perr.trials];
         end
         
@@ -111,9 +111,9 @@ for sub = [1:10]           %Subjects
 end
 
 %% Estimated marginal means
-theta_Corr = mean(trials_corr.*theta_Corr,2)/mean(trials_corr);
-theta_Serr = mean(trials_Serr.*theta_Serr,2)/mean(trials_Serr);
-theta_Perr = mean(trials_Perr.*theta_Perr,2)/mean(trials_Perr);
+power_Corr = mean(trials_corr.*power_Corr,2)/mean(trials_corr);
+power_Serr = mean(trials_Serr.*power_Serr,2)/mean(trials_Serr);
+power_Perr = mean(trials_Perr.*power_Perr,2)/mean(trials_Perr);
 %% Topographic plots
 
 figure
@@ -122,7 +122,7 @@ if exist('Perr')
 else
     subplot(1,2,1)
 end
-topoplot(mean(theta_Corr,2), corr.chanlocs(2:16), 'maplimits',topo_plots_lim, 'plotrad', 0.53)
+topoplot(mean(power_Corr,2), corr.chanlocs(2:16), 'maplimits',topo_plots_lim, 'plotrad', 0.53)
 title('Correct letters','FontSize', 24)
 cbarHandle = colorbar;
 set(get(cbarHandle, 'title'), 'string', '(dB)')
@@ -131,13 +131,13 @@ if exist('Perr')
 else
     subplot(1,2,2)
 end
-topoplot(mean(theta_Serr,2), Serr.chanlocs(2:16), 'maplimits',topo_plots_lim, 'plotrad', 0.53)
+topoplot(mean(power_Serr,2), Serr.chanlocs(2:16), 'maplimits',topo_plots_lim, 'plotrad', 0.53)
 title('System errors','FontSize', 24)
 cbarHandle = colorbar;
 set(get(cbarHandle, 'title'), 'string', '(dB)')
 if exist('Perr')
     subplot(1,3,3)
-    topoplot(mean(theta_Perr,2), Perr.chanlocs(2:16), 'maplimits',topo_plots_lim, 'plotrad', 0.53)
+    topoplot(mean(power_Perr,2), Perr.chanlocs(2:16), 'maplimits',topo_plots_lim, 'plotrad', 0.53)
     title('Participant errors','FontSize', 24)
     cbarHandle = colorbar;
     set(get(cbarHandle, 'title'), 'string', '(dB)')
