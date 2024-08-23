@@ -55,5 +55,5 @@ end
 mixed_model = array2table(mixed_model, 'VariableNames',{'Group','Participant','Cog_load','Learning_stage','Error_rate','Age','Sex'});
 
 writetable(mixed_model, ...
-    'C:\toolbox\Code_Speller_Reverse\results\behavioral_results_mixed_model2.xlsx');
+    'C:\toolbox\Code_Speller_Reverse\results\behavioral_results_mixed_model.xlsx');
 
