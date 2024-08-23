@@ -21,7 +21,8 @@ trials_Perr = [];
 trials_Serr = [];
 
 for sub = [1:10]           %Subjects
-    
+
+    % Create epochs
     if ~exist(char(strcat(dir, group, num2str(sub), '\online_data\epochs\feedbackLetter_corr.set')))
         
         %Load data
@@ -75,7 +76,7 @@ for sub = [1:10]           %Subjects
         end
     else
         
-        % Load epochs
+        % Load already existing epochs
         corr = pop_loadset('filename', 'feedbackLetter_corr.set', 'filepath', ...
             char(strcat(dir, group, num2str(sub), '\online_data\epochs\')));
         Serr = pop_loadset('filename', 'feedbackLetter_Serr.set', 'filepath', ...
