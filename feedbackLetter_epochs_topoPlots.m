@@ -2,8 +2,7 @@
 
 clear all; clc; close all
 
-group = "S";            % S = control; P = participante with ASD
-
+group = "S";            % S = non-autistic; P = autistic
 dir = "C:\toolbox\Code_Speller_Reverse\data\";
 
 %% 
