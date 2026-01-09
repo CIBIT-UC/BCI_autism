@@ -1,3 +1,5 @@
+Code repository for data analysis used in the study [“A role for preparatory midfrontal theta in autism as revealed by a high executive load brain–computer interface reverse spelling task.”](https://www.nature.com/articles/s41598-025-00670-7).
+
 **Behavioural and BCI feasibility analysis**
 - partErrorRate_mixedModel.m: Export data to a file to compare participants' error rate between groups considering cognitive load and practice/learning effects.
 - BCIsystem_errorRate.m: Export data to a file to compare BCI system error rate between groups considering practice/learning effects.
