@@ -16,3 +16,15 @@ Language: MATLAB R2018b
 - feedbackLetter_epochs_topoPlots.m: Create EEG epochs and generate topographic maps of power distribution following response feedback.
 - preResponse_mixedModel.m: Export data to compare frequency power during pre-response between groups considering performance, cognitive load, practice/learning effects and distinct task periods.
 - feedbackLetter_mixedModel.m: Export data to compare frequency power during pre-response between groups considering performance and practice/learning effects.
+
+**Statistical analysis (stats_SPSS)**
+- partErrorRate_stats.sps: 
+- preResponse_thetaFCz_stats.sps:
+- preResponse_thetaPOz_stats.sps:
+- preResponse_alphaFCz_stats.sps:
+- preResponse_alphaPOz_stats.sps:
+- feedback_thetaFCz_stats.sps:
+- feedback_thetaPOz_stats.sps:
+- feedback_alphaFCz_stats.sps:
+- feedback_alphaPOz_stats.sps:
+**Requirements**: SPSS V27.
