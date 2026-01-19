@@ -18,13 +18,13 @@ Language: MATLAB R2018b
 - feedbackLetter_mixedModel.m: Export data to compare frequency power during pre-response between groups considering performance and practice/learning effects.
 
 **Statistical analysis (stats_SPSS)**
-- partErrorRate_stats.sps: 
-- preResponse_thetaFCz_stats.sps:
-- preResponse_thetaPOz_stats.sps:
-- preResponse_alphaFCz_stats.sps:
-- preResponse_alphaPOz_stats.sps:
-- feedback_thetaFCz_stats.sps:
-- feedback_thetaPOz_stats.sps:
-- feedback_alphaFCz_stats.sps:
-- feedback_alphaPOz_stats.sps:
+- partErrorRate_stats.sps: Statistical analysis to test the effects of group, cognitive load, practice and respective interactions on error rate.
+- preResponse_thetaFCz_stats.sps: Statistical analysis to test the effects of group, performance, cognitive load, pre-response period, practice and interactions on pre-response FCz theta power.
+- preResponse_thetaPOz_stats.sps: Statistical analysis to test the effects of group, performance, cognitive load, pre-response period, practice and interactions on pre-response POz theta power.
+- preResponse_alphaFCz_stats.sps: Statistical analysis to test the effects of group, performance, cognitive load, pre-response period, practice and interactions on pre-response FCz alpha power.
+- preResponse_alphaPOz_stats.sps: Statistical analysis to test the effects of group, performance, cognitive load, pre-response period, practice and interactions on pre-response POz alpha power.
+- feedback_thetaFCz_stats.sps: Statistical analysis to test the effects of group, performance, practice and respective interactions on FCz theta power following feedback.
+- feedback_thetaPOz_stats.sps: Statistical analysis to test the effects of group, performance, practice and respective interactions on POz theta power following feedback.
+- feedback_alphaFCz_stats.sps: Statistical analysis to test the effects of group, performance, practice and respective interactions on FCz alpha power following feedback.
+- feedback_alphaPOz_stats.sps: Statistical analysis to test the effects of group, performance, practice and respective interactions on POz alpha power following feedback.
 **Requirements**: SPSS V27.
